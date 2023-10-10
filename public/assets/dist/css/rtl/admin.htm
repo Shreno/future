@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>future | لوحه التحكم</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="http://127.0.0.1:8000/assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  
+ 
+   <!-- jvectormap -->
+  <link rel="stylesheet" href="http://127.0.0.1:8000/assets/bower_components/jvectormap/jquery-jvectormap.css">
+  <a style="display:none" href="#" id="try" data-link="http://127.0.0.1:8000/getregions">Try</a>
+
+ 
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.flash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css"  />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <!-- Theme style -->
+            <link rel="stylesheet" href="http://127.0.0.1:8000/assets/dist/css/rtl/bootstrap-rtl.min.css">
+        <link rel="stylesheet" href="http://127.0.0.1:8000/assets/dist/css/rtl/rtl.css">
+        <link rel="stylesheet" href="http://127.0.0.1:8000/assets/dist/css/rtl/AdminLTE.min.css">
+     <link rel="stylesheet" href="http://127.0.0.1:8000/assets/dist/css/rtl/app.js">
+      <link rel="stylesheet" href="http://127.0.0.1:8000/assets/dist/css/rtl/rtl.css
+">
+
+       <link rel="stylesheet" href="http://127.0.0.1:8000/assets/dist/css/rtl/AdminLTE.css">
+        <link rel="stylesheet" href="http://127.0.0.1:8000/assets/dist/css/rtl/adminlte.min.js">
+        
+
+     
+  <link rel="stylesheet" href="http://127.0.0.1:8000/assets/dist/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+ 
+   
+         <style>
+            .box-body {
+    overflow-x: scroll !important;
+}
+     @media print {
+ 
+.main-footer{display:none;}
+}
+
+ 
+        </style>
+        <script type="text/javascript">
+         
+ 
+  
+  $(document).ready(function() {
+    $('#example1').DataTable( {
+          
+        
+         retrieve: true,
+          fixedColumns:   true,
+        dom: 'Bfrtip',
+        direction: "rtl",
+        charset: "utf-8",
+      direction: "rtl",
+        buttons: [
+             
+            'copy', 'excel', 'pdfHtml5', 'print'
+        ]
+    } );
+} );
+</script>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="/admin" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b><img src="http://127.0.0.1:8000/assets/dist/img/loo.jpeg" width="130"/></b></span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b><img src="http://127.0.0.1:8000/assets/dist/img/loo.jpeg" width="130"/></b></span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+                          <!-- Notifications: style can be found in dropdown.less -->
+            <li class="dropdown notifications-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-bell"></i>
+                
+              </a>
+              <ul class="dropdown-menu">
+                <li class="header"> 0 اشعارات </li>
+                <li>
+                  <!-- inner menu: contains the actual data -->
+                  <ul class="menu">
+                                        <center>
+                        <i class="fa fa-bell"></i>
+                        <h5> لا تملك اشعارات</h5>
+                </center>
+                    
+
+                  </ul>
+                </li>
+                <li class="footer"><a href="http://127.0.0.1:8000/notifications?unread">عرض</a></li>
+              </ul>
+            </li>
+
+            <!-- User Account: style can be found in dropdown.less -->
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="http://127.0.0.1:8000/storage/avatar/admin/3lGPd1TcQoA7u4WfMUuLAdR2wsqB2Bk2Pn2pdXyP.jpeg" class="user-image" alt="User Image">
+                <span class="hidden-xs">Admin </span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- User image -->
+                <li class="user-header">
+                  <img src="http://127.0.0.1:8000/storage/avatar/admin/3lGPd1TcQoA7u4WfMUuLAdR2wsqB2Bk2Pn2pdXyP.jpeg" class="img-circle" alt="User Image">
+
+                  <p>
+                      Admin
+                    <small>admin</small>
+                  </p>
+                </li>
+                <!-- Menu Body -->
+                <li class="user-body">
+                  <div class="row">
+                    <div class="col-xs-4 text-center">
+                      <a href="#"></a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#"></a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#"></a>
+                    </div>
+                  </div>
+                  <!-- /.row -->
+                </li>
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <a href="http://127.0.0.1:8000/profile" class="btn btn-default btn-flat">Profile</a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-flat" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">Sign out</a>
+                    <form id="logout-form" action="http://127.0.0.1:8000/logout" method="POST" style="display: none;">
+                        <input type="hidden" name="_token" value="kJwC48GCh3wxPW3Ug5ft7ySJWzYWveUXI7Myhzxh" autocomplete="off">                    </form>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <!-- Control Sidebar Toggle Button -->
+
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+       
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="header strong">الفوائم الرئيسية</li>
+            <li class="active">
+                <a href="/admin">
+               <i class="fa-solid fa-house"></i> <span>لوحة التحكم</span>
+                    </span>
+                </a>
+            </li>
+             
+            <!-- client -->
+            <li class="treeview">
+                <a href="#">
+                   <i class="fa-solid fa-shop"></i> <span>العملاء</span>
+                    <span class="pull-right-container">
+                       <i class=" pull-right fa-solid fa-arrow-left"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                                    <li><a href="http://127.0.0.1:8000/admin/clients/create?type=1"><i class="fa-solid fa-circle-plus"></i> أضافة متجر </a></li>
+                                
+                    <li><a href="http://127.0.0.1:8000/admin/clients?type=1"><i class="fa-solid fa-basket-shopping"></i> المتاجر</a></li>
+                                
+                    
+
+
+                </ul>
+            </li>
+            
+
+            <!-- end client -->
+
+            <!-- الموظفين  -->
+            <li class="treeview">
+                <a href="#">
+                   <i class="fa-regular fa-circle-user"></i> <span>الموظفين</span>
+                    <span class="pull-right-container">
+                       <i class=" pull-right fa-solid fa-arrow-left"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                          
+                 <li><a href="http://127.0.0.1:8000/admin/delegates/create?type=1"><i class="fa-solid fa-circle-plus"></i>  أضافة مندوب متجر </a></li>
+                                
+
+                 <li> <a href="http://127.0.0.1:8000/admin/delegates?type=1">
+                     <i class="fa-solid fa-truck"></i><span>مناديب المتاجر</span>
+                    </span> </a></li>  
+                                             
+            <li class="treeview">
+                <a href="#">
+                    <span>موظفين الشركة</span>
+                    <span class="pull-right-container">
+                       <i class=" pull-right fa-solid fa-arrow-left"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                                        <li><a href="http://127.0.0.1:8000/admin/users"><i class="fa  fa-users"></i> المستخدمين</a></li>
+                                                            <li><a href="http://127.0.0.1:8000/admin/app/settings"><i class="fa fa-cog"></i> الإعدادت</a></li>
+                    
+                                        <li><a href="http://127.0.0.1:8000/admin/roles"><i class="fa  fa-lock"></i> الأدوار</a></li>
+                    
+                  
+
+                </ul>
+            </li>
+                </ul>
+            </li>
+
+
+            <!-- الموظفين  -->>
+            <!-- الطلبات  -->
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa-solid fa-cart-plus"></i> <span> الطلبات</span>
+                    <span class="pull-right-container">
+                       <i class=" pull-right fa-solid fa-arrow-left"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+
+
+                
+                <li>
+                     <a href="http://127.0.0.1:8000/admin/client-orders?work_type=1">
+                   <i class="fa-solid fa-basket-shopping"></i>طلبات المتاجر</span>
+                    </span>
+                </a>
+               </li>
+                              
+
+                        <li>
+                <a href="http://127.0.0.1:8000/admin/feedbacks">
+                  <i class="fa-regular fa-circle-user"></i><span>   طلبات الأفراد </span>
+                   
+
+                </a>
+            </li>
+            
+                </ul>
+            </li>
+
+
+
+
+            <!-- الطلبات  -->
+
+            <!-- المحاسبه -->
+            <li class="treeview">
+                <a href="#">
+                   <i class="fa-solid fa-file-invoice-dollar"></i> <span> المحاسبة</span>
+                    <span class="pull-right-container">
+                       <i class=" pull-right fa-solid fa-arrow-left"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                            <li>
+                <a href="http://127.0.0.1:8000/admin/balances?type=1">
+                    <i class="fa fa-money"></i> <span>محفظة المتاجر</span>
+                    </span>
+                </a>
+            </li>
+            
+
+            
+
+
+            
+                        
+
+
+
+                </ul>
+            </li>
+
+
+
+
+            <!-- المحاسبه -->
+           
+
+
+           
+            
+            
+            
+
+          
+
+             
+          
+          
+          
+                       
+            <li>
+                <a href="http://127.0.0.1:8000/admin/client-orders/?notDelegated1">
+                    <i class="fa fa-sitemap"></i> <span>طلبات مناديب المتاجر</span>
+                                                        </a>
+            </li>
+                                                            <li>
+                <a href="http://127.0.0.1:8000/admin/request-joins">
+                    <i class="fa fa-handshake-o"></i> <span>طلب الخدمه</span>
+                                        
+                </a>
+            </li>
+                                  
+             <li class="treeview">
+                <a href="#">
+                   <i class="fa-solid fa-shop"></i> <span>المدن و المناطق</span>
+                    <span class="pull-right-container">
+                       <i class=" pull-right fa-solid fa-arrow-left"></i>
+                    </span>
+                </a>
+
+                <ul class="treeview-menu">
+                                        <li><a href="http://127.0.0.1:8000/admin/cities/create"><i class="fa-solid fa-circle-plus"></i> أضافة مدينة </a></li>
+                                                            
+                    <li><a href="http://127.0.0.1:8000/admin/cities"><i class="fa-solid fa-basket-shopping"></i> المدن</a></li>
+                                        
+                    
+                                        >
+                    
+
+
+                </ul>
+                
+            </li>
+            
+                        <li>
+                <a href="http://127.0.0.1:8000/admin/clients/api">
+                    <i class="fa fa-handshake-o"></i> <span>  api المتاجر</span>
+                   
+
+                </a>
+            </li>
+            
+            
+                        <li>
+                <a href="http://127.0.0.1:8000/admin/rate_orders">
+                    <i class="fa fa-handshake-o"></i> <span>  تقييم العملاء </span>
+                   
+
+                </a>
+            </li>
+                      
+
+                        <li>
+                <a href="http://127.0.0.1:8000/admin/delegates/tracking">
+                    <i class="fa fa-handshake-o"></i> <span> تتبع المناديب </span>
+                   
+
+                </a>
+            </li>
+                        
+             <li>
+                <a href="http://127.0.0.1:8000/admin/statuses">
+                    <i class="fa fa-sitemap"></i> <span>الحالات </span>
+                   
+
+                </a>
+            </li>
+
+
+
+ 
+ 
+
+       
+           
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-globe"></i> <span>الموقع</span>
+                    <span class="pull-right-container">
+                       <i class=" pull-right fa-solid fa-arrow-left"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                                        <li><a href="http://127.0.0.1:8000/admin/sliders"><i class="fa fa-window-restore"></i> Slider</a></li>
+                                                            <li><a href="http://127.0.0.1:8000/admin/pages"><i class="fa fa-file-text"></i> pages</a></li>
+                                                            <li><a href="http://127.0.0.1:8000/admin/posts"><i class="fa fa-newspaper-o"></i> Posts</a></li>
+                                                            <li><a href="http://127.0.0.1:8000/admin/categories"><i class="fa fa-th"></i> Categories</a></li>
+                                                            <li><a href="http://127.0.0.1:8000/admin/services"><i class="fa fa-first-order"></i> Service</a></li>
+                                                            <li><a href="http://127.0.0.1:8000/admin/what-we-do"><i class="fa fa-question-circle"></i> What We Do</a></li>
+                                                            <li><a href="http://127.0.0.1:8000/admin/branches"><i class="fa fa-map"></i> Branches</a></li>
+                                                            <li><a href="http://127.0.0.1:8000/admin/contacts"><i class="fa fa-envelope-o"></i> Contact us</a></li>
+                                        
+                   
+                 
+                 
+                                        <li><a href="http://127.0.0.1:8000/admin/settings"><i class="fa  fa-cog"></i> Settings</a></li>
+                                        
+                    
+                </ul>
+            </li>
+
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
+  <!-- Content Wrapper. Contains page content -->
+  
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      الرئيسية 
+    </h1>
+ 
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <!-- Info boxes -->
+    <div class="row">
+      <div class="col-lg-4 col-xs-6">
+        <!-- small box -->
+        
+            <div class="info-box  bg-gr1">
+                <span class="info-box-icon  elevation-1"><i class="fa-solid  fa-basket-shopping"></i></span>
+                <div class="info-box-content">
+                <span class="info-box-text">طلبات المتاجر</span>
+                <span class="info-box-number">5</span>
+                </div>
+            </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-4 col-xs-6">
+        <!-- small box -->
+        
+         <div class="info-box  bg-red">
+                <span class="info-box-icon  elevation-1"><i class="fa-solid fa-truck"></i></span>
+                <div class="info-box-content">
+                <span class="info-box-text">مناديب المتاجر </span>
+                <span class="info-box-number">2</span>
+                </div>
+            </div>
+            
+ 
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-4 col-xs-6">
+        <!-- small box -->
+          <div class="info-box  bg-green">
+                <span class="info-box-icon"><i class="fa-solid fa-cart-plus"></i></span>
+                <div class="info-box-content">
+                <span class="info-box-text">المتاجر المشتركة </span>
+                <span class="info-box-number">2</span>
+                </div>
+            </div>
+        
+      </div>
+      
+    </div>
+        <div class="row">
+      <div class="col-lg-4 col-xs-6">
+        <!-- small box -->
+        
+            <div class="info-box bg-blue">
+                <span class="info-box-icon  elevation-1"><i class="fa-solid  fa-utensils"></i></span>
+                <div class="info-box-content">
+                <span class="info-box-text">طلبات المطاعم</span>
+                <span class="info-box-number">5</span>
+                </div>
+            </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-4 col-xs-6">
+        <!-- small box -->
+        
+         <div class="info-box  bg-gr2">
+                <span class="info-box-icon bg-danger elevation-1"><i class="fa-solid fa-cart-plus"></i></span>
+                <div class="info-box-content">
+                <span class="info-box-text">المناديب </span>
+                <span class="info-box-number">2</span>
+                </div>
+            </div>
+            
+ 
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-4 col-xs-6">
+        <!-- small box -->
+          <div class="info-box  bg-green">
+                <span class="info-box-icon bg-danger elevation-1"><i class="fa-solid fa-cart-plus"></i></span>
+                <div class="info-box-content">
+                <span class="info-box-text">المتاجر </span>
+                <span class="info-box-number">2</span>
+                </div>
+            </div>
+        < 
+      </div>
+      
+    </div>
+  
+  
+       <div class="col-xs-12" style="background: #fff;">
+           
+     <ul class="nav nav-tabs" style="
+    background: #fff;
+    font-weight: bold;
+    margin: 15px;
+    margin-bottom: 3px;">
+    <li class="active"><a style="color: #000;
+    padding-right: 25px;" data-toggle="tab" href="#menu1">اليوم</a></li>
+    <li><a style="color: #000;
+    padding-right: 25px;"  data-toggle="tab" href="#menu2">الكل</a></li>
+    <li><a style="color: #000;
+    padding-right: 25px;" data-toggle="tab" href="#menu3">أمس</a></li>
+    <li><a  style="color: #000;
+    padding-right: 25px;" data-toggle="tab" href="#menu4">أخر 30 يوم</a></li>
+  </ul>
+
+  <div class="tab-content">
+       <div id="menu1" class="tab-pane fade in active">
+           
+                                                          <div class="col-sm-4 col-md-2 ">
+                         
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;height: 150px;">
+                               <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=1&amp;&amp;bydate=Today">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >تسجيل الطلب من المتجر</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                         
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;height: 150px;">
+                               <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=2&amp;&amp;bydate=Today">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >تم استلام الطلب</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                         
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;height: 150px;">
+                               <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=4&amp;&amp;bydate=Today">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >تم التسليم</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                         
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;height: 150px;">
+                               <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=9&amp;&amp;bydate=Today">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >تم الشحن</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                         
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;height: 150px;">
+                               <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=10&amp;&amp;bydate=Today">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >ملغي</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                         
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;height: 150px;">
+                               <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=11&amp;&amp;bydate=Today">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >تم إعادته للمتجر</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                         
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;height: 150px;">
+                               <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=16&amp;&amp;bydate=Today">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >تم استلام طلبك</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                         
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;height: 150px;">
+                               <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=17&amp;&amp;bydate=Today">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >خارج للتوصيل</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                         
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;height: 150px;">
+                               <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=18&amp;&amp;bydate=Today">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >تم التوصيل</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                         
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;height: 150px;">
+                               <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=19&amp;&amp;bydate=Today">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >إسترجاع المبلغ</p>
+                              </a>
+                          </div>
+                      </div>
+                                </div>
+               <div id="menu2" class="tab-pane fade in ">
+                                    <div class="col-sm-4 col-md-2 ">
+                      <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;    height: 150px;">
+                          <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                          <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=1&amp;&amp;bydate=All">
+                          <h4 class="text-center" >
+
+                              1
+                          </h4>
+                          <p class="text-center" >تسجيل الطلب من المتجر</p>
+                          </a>
+                      </div>
+                  </div>
+                                    <div class="col-sm-4 col-md-2 ">
+                      <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;    height: 150px;">
+                          <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                          <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=2&amp;&amp;bydate=All">
+                          <h4 class="text-center" >
+
+                              0
+                          </h4>
+                          <p class="text-center" >تم استلام الطلب</p>
+                          </a>
+                      </div>
+                  </div>
+                                    <div class="col-sm-4 col-md-2 ">
+                      <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;    height: 150px;">
+                          <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                          <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=4&amp;&amp;bydate=All">
+                          <h4 class="text-center" >
+
+                              0
+                          </h4>
+                          <p class="text-center" >تم التسليم</p>
+                          </a>
+                      </div>
+                  </div>
+                                    <div class="col-sm-4 col-md-2 ">
+                      <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;    height: 150px;">
+                          <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                          <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=9&amp;&amp;bydate=All">
+                          <h4 class="text-center" >
+
+                              0
+                          </h4>
+                          <p class="text-center" >تم الشحن</p>
+                          </a>
+                      </div>
+                  </div>
+                                    <div class="col-sm-4 col-md-2 ">
+                      <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;    height: 150px;">
+                          <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                          <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=10&amp;&amp;bydate=All">
+                          <h4 class="text-center" >
+
+                              0
+                          </h4>
+                          <p class="text-center" >ملغي</p>
+                          </a>
+                      </div>
+                  </div>
+                                    <div class="col-sm-4 col-md-2 ">
+                      <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;    height: 150px;">
+                          <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                          <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=11&amp;&amp;bydate=All">
+                          <h4 class="text-center" >
+
+                              0
+                          </h4>
+                          <p class="text-center" >تم إعادته للمتجر</p>
+                          </a>
+                      </div>
+                  </div>
+                                    <div class="col-sm-4 col-md-2 ">
+                      <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;    height: 150px;">
+                          <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                          <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=16&amp;&amp;bydate=All">
+                          <h4 class="text-center" >
+
+                              0
+                          </h4>
+                          <p class="text-center" >تم استلام طلبك</p>
+                          </a>
+                      </div>
+                  </div>
+                                    <div class="col-sm-4 col-md-2 ">
+                      <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;    height: 150px;">
+                          <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                          <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=17&amp;&amp;bydate=All">
+                          <h4 class="text-center" >
+
+                              0
+                          </h4>
+                          <p class="text-center" >خارج للتوصيل</p>
+                          </a>
+                      </div>
+                  </div>
+                                    <div class="col-sm-4 col-md-2 ">
+                      <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;    height: 150px;">
+                          <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                          <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=18&amp;&amp;bydate=All">
+                          <h4 class="text-center" >
+
+                              4
+                          </h4>
+                          <p class="text-center" >تم التوصيل</p>
+                          </a>
+                      </div>
+                  </div>
+                                    <div class="col-sm-4 col-md-2 ">
+                      <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;    height: 150px;">
+                          <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                          <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=19&amp;&amp;bydate=All">
+                          <h4 class="text-center" >
+
+                              0
+                          </h4>
+                          <p class="text-center" >إسترجاع المبلغ</p>
+                          </a>
+                      </div>
+                  </div>
+                                </div>
+              <div id="menu3" class="tab-pane fade in">
+                                                          <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=1&amp;&amp;bydate=Yesterday">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >تسجيل الطلب من المتجر</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=2&amp;&amp;bydate=Yesterday">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >تم استلام الطلب</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=4&amp;&amp;bydate=Yesterday">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >تم التسليم</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=9&amp;&amp;bydate=Yesterday">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >تم الشحن</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=10&amp;&amp;bydate=Yesterday">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >ملغي</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=11&amp;&amp;bydate=Yesterday">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >تم إعادته للمتجر</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=16&amp;&amp;bydate=Yesterday">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >تم استلام طلبك</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=17&amp;&amp;bydate=Yesterday">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >خارج للتوصيل</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=18&amp;&amp;bydate=Yesterday">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >تم التوصيل</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important;padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000" href="http://127.0.0.1:8000/admin/client-orders?status_id=19&amp;&amp;bydate=Yesterday">
+                              <h4 class="text-center" >
+
+                                  0
+                              </h4>
+                              <p class="text-center" >إسترجاع المبلغ</p>
+                              </a>
+                          </div>
+                      </div>
+                                </div>
+              <div id="menu4" class="tab-pane fade in">
+                                                          <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important; padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000"  href="http://127.0.0.1:8000/admin/client-orders?status_id=1&amp;&amp;bydate=LastMonth">
+                              <h4 class="text-center"  >
+                                  1
+                              </h4>
+                              <p class="text-center" >تسجيل الطلب من المتجر</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important; padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000"  href="http://127.0.0.1:8000/admin/client-orders?status_id=2&amp;&amp;bydate=LastMonth">
+                              <h4 class="text-center"  >
+                                  0
+                              </h4>
+                              <p class="text-center" >تم استلام الطلب</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important; padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000"  href="http://127.0.0.1:8000/admin/client-orders?status_id=4&amp;&amp;bydate=LastMonth">
+                              <h4 class="text-center"  >
+                                  0
+                              </h4>
+                              <p class="text-center" >تم التسليم</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important; padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000"  href="http://127.0.0.1:8000/admin/client-orders?status_id=9&amp;&amp;bydate=LastMonth">
+                              <h4 class="text-center"  >
+                                  0
+                              </h4>
+                              <p class="text-center" >تم الشحن</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important; padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000"  href="http://127.0.0.1:8000/admin/client-orders?status_id=10&amp;&amp;bydate=LastMonth">
+                              <h4 class="text-center"  >
+                                  0
+                              </h4>
+                              <p class="text-center" >ملغي</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important; padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000"  href="http://127.0.0.1:8000/admin/client-orders?status_id=11&amp;&amp;bydate=LastMonth">
+                              <h4 class="text-center"  >
+                                  0
+                              </h4>
+                              <p class="text-center" >تم إعادته للمتجر</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important; padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000"  href="http://127.0.0.1:8000/admin/client-orders?status_id=16&amp;&amp;bydate=LastMonth">
+                              <h4 class="text-center"  >
+                                  0
+                              </h4>
+                              <p class="text-center" >تم استلام طلبك</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important; padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000"  href="http://127.0.0.1:8000/admin/client-orders?status_id=17&amp;&amp;bydate=LastMonth">
+                              <h4 class="text-center"  >
+                                  0
+                              </h4>
+                              <p class="text-center" >خارج للتوصيل</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important; padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000"  href="http://127.0.0.1:8000/admin/client-orders?status_id=18&amp;&amp;bydate=LastMonth">
+                              <h4 class="text-center"  >
+                                  4
+                              </h4>
+                              <p class="text-center" >تم التوصيل</p>
+                              </a>
+                          </div>
+                      </div>
+                                        <div class="col-sm-4 col-md-2 ">
+                          <div class="small-box  bg-gray box_status" style="    height: 120px !important; padding:10px; background-color:  !important;">
+                              <div class="icon">
+                                  <i class="fa fa-shopping-bag"></i>
+                              </div>
+                              <a style="color:#000"  href="http://127.0.0.1:8000/admin/client-orders?status_id=19&amp;&amp;bydate=LastMonth">
+                              <h4 class="text-center"  >
+                                  0
+                              </h4>
+                              <p class="text-center" >إسترجاع المبلغ</p>
+                              </a>
+                          </div>
+                      </div>
+                                </div>
+  </div>
+ <div>
+  </section>
+  <!-- /.content -->
+</div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+
+     
+    </footer>
+<!-- jQuery 3 -->
+<script src="http://127.0.0.1:8000/assets/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="http://127.0.0.1:8000/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="http://127.0.0.1:8000/assets/bower_components/fastclick/lib/fastclick.js"></script>
+
+<!-- Sparkline -->
+<script src="http://127.0.0.1:8000/assets/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+
+<!-- SlimScroll -->
+<script src="http://127.0.0.1:8000/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- AdminLTE App -->
+<script src="http://127.0.0.1:8000/assets/dist/js/adminlte.min.js"></script>
+<script src="http://127.0.0.1:8000/assets/dist/js/demo.js"></script>
+<script  type="text/javascript">
+    var ctvChart = document.getElementById('nvaqthdmowfzjseuripkgbylx').getContext('2d');
+    function nvaqthdmowfzjseuripkgbylx_create(data) {
+        nvaqthdmowfzjseuripkgbylx_rendered = true;
+        document.getElementById("nvaqthdmowfzjseuripkgbylx_loader").style.display = 'none';
+        document.getElementById("nvaqthdmowfzjseuripkgbylx").style.display = 'block';
+        window.nvaqthdmowfzjseuripkgbylx = new Chart(document.getElementById("nvaqthdmowfzjseuripkgbylx").getContext("2d"), {
+            type: data[0].type,
+            data: {
+                labels: ["2023-10","2023-09"],
+                datasets: data
+            },
+            options: {"maintainAspectRatio":false,"scales":{"xAxes":[],"yAxes":[{"ticks":{"beginAtZero":true}}]}},
+            plugins: []
+        });
+    }
+    let nvaqthdmowfzjseuripkgbylx_rendered = false;
+let nvaqthdmowfzjseuripkgbylx_load = function () {
+    if (document.getElementById("nvaqthdmowfzjseuripkgbylx") && !nvaqthdmowfzjseuripkgbylx_rendered) {
+                    nvaqthdmowfzjseuripkgbylx_create([{"borderWidth":2,"backgroundColor":"#f39c12","data":[1,4],"label":"orders","type":"bar"}])
+            }
+};
+window.addEventListener("load", nvaqthdmowfzjseuripkgbylx_load);
+document.addEventListener("turbolinks:load", nvaqthdmowfzjseuripkgbylx_load);
+
+</script>
+
+<script  type="text/javascript">
+    var ctvChart = document.getElementById('qfvwbckmlpsuyodrhxngziatj').getContext('2d');
+    function qfvwbckmlpsuyodrhxngziatj_create(data) {
+        qfvwbckmlpsuyodrhxngziatj_rendered = true;
+        document.getElementById("qfvwbckmlpsuyodrhxngziatj_loader").style.display = 'none';
+        document.getElementById("qfvwbckmlpsuyodrhxngziatj").style.display = 'block';
+        window.qfvwbckmlpsuyodrhxngziatj = new Chart(document.getElementById("qfvwbckmlpsuyodrhxngziatj").getContext("2d"), {
+            type: data[0].type,
+            data: {
+                labels: ["2023-09"],
+                datasets: data
+            },
+            options: {"maintainAspectRatio":false,"scales":{"xAxes":[],"yAxes":[{"ticks":{"beginAtZero":true}}]}},
+            plugins: []
+        });
+    }
+    let qfvwbckmlpsuyodrhxngziatj_rendered = false;
+let qfvwbckmlpsuyodrhxngziatj_load = function () {
+    if (document.getElementById("qfvwbckmlpsuyodrhxngziatj") && !qfvwbckmlpsuyodrhxngziatj_rendered) {
+                    qfvwbckmlpsuyodrhxngziatj_create([{"borderWidth":2,"backgroundColor":"#00c0ef","data":[2],"label":"clients","type":"bar"}])
+            }
+};
+window.addEventListener("load", qfvwbckmlpsuyodrhxngziatj_load);
+document.addEventListener("turbolinks:load", qfvwbckmlpsuyodrhxngziatj_load);
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script>
+        
+    </script>
+<script>
+
+$('#city_id').change(function () {
+    $("#region_id option").remove();
+
+    var url = $('#try').attr("data-link") + '/' + $('#city_id').val()
+
+    $.ajax({
+      type: "GET",
+      url: url,
+      success: function (data) {
+
+        for (var i = 0; i <= data.length; i++) {
+          $('#region_id').append(data[i])
+        }
+      }
+    });
+
+  });
+
+
+
+</script>
+
+
+</body>
+</html>

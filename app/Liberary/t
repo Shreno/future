@@ -1,0 +1,51 @@
+        $id = 1;
+        $appSetting = AppSetting::findOrFail($id);
+        $permissionsTitle = [];
+        $lang = LaravelLocalization::getCurrentLocale();
+        $notificationsBar = Notification::where('notification_to_type', 'admin')->Unread()->get();
+
+
+
+
+
+            // permissions
+            if (auth()->user()) {
+                dd('r');
+                if (auth()->user()->user_type == 'admin') {
+                if (auth()->user()->role_id == null) {
+                    abort(403, 'Access Denied');
+                }
+                $role = Role::findOrFail(auth()->user()->role_id);
+                
+                $permissions = $role->permissions;
+                $permissionsTitle = [];
+                foreach ($permissions as $permission)
+                {
+                $permissionsTitle[] = $permission->title;
+                } 
+            }
+    
+            }
+            // notifucation
+            if (auth()->user()) {
+                $user = auth()->user();
+            if ($user->user_type == 'admin') {
+                $notificationsBar = Notification::where('notification_to_type', 'admin')
+                ->Unread()
+                ->latest()
+                ->get();
+            } else {
+                $notificationsBar = Notification::where('notification_to', $user->id)
+                ->Unread()
+                ->latest()
+                ->get();
+            }
+    
+            }
+
+            View::share(['appSetting'=> $appSetting,'permissionsTitle'=>$permissionsTitle,'lang'=>$lang,'notificationsBar'=>$notificationsBar]);
+
+
+
+        //
+    

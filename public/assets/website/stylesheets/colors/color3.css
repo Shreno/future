@@ -1,0 +1,96 @@
+/**
+  * Color
+  * Border Color
+  * Background Color  
+*/
+
+/* Color
+-------------------------------------------------------------- */
+a:hover, a:focus, input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.switcher-container h2 i,
+.switcher-container h2 a.active:after,
+#mainnav > ul > li > a:hover,
+#mainnav > ul > li.active > a,
+.page-title .breadcrumbs ul.trail-items li a, 
+.page-title .breadcrumbs ul.trail-items li span,
+.footer-widgets ul li a:hover,
+ul.flat-infomation li a:hover,
+.imagebox.style1 .imagebox-content a.btn-imagebox,
+.imagebox.style1 .imagebox-content a.btn-imagebox:before,
+.counter-item .counter-value .icon-wrap span,
+.iconbox.style3 .iconbox-icon span, .flat-introduce h1 span,
+.iconbox.style4 .iconbox-icon span {
+	color: #f87b27;
+}
+
+
+/* Border Color
+-------------------------------------------------------------- */
+.owl-theme .owl-dots .owl-dot.active span, 
+.owl-theme .owl-dots .owl-dot:hover span,
+.footer-widgets input[type="text"]:focus, 
+.footer-widgets input[type="email"]:focus, 
+.footer-widgets textarea:focus,
+.loading-effect-2 > span,
+.loading-effect-2 > span:before,
+.loading-effect-2 > span:after {
+	border-color: #f87b27;
+} 
+
+textarea:focus, select:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+#form-email-footer:focus {
+	border: 1px solid #f87b27;
+}
+
+/* Background Color
+-------------------------------------------------------------- */
+button, 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"],
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+.info-top-right a.appoinment,
+#mainnav > ul > li > a:after,
+#mainnav > ul > li.active > a:after,
+.sidebar .widget.widget-nav-menu ul li:hover, 
+.sidebar .widget.widget-nav-menu ul li.active,
+.main-about .sidebar .widget-text .textwidget a,
+.box-item .text-box ul li:before,
+.sidebar .widget.widget-text ul.download li:after,
+.iconbox .iconbox-icon, .flat-row-title h2:after,
+.news-post .entry-post .content-post .button-post a,
+.text-box .btn-box a, .counter-title h2:after,
+#mainnav ul.submenu > li > a:hover,
+.flat-iconbox.style2 .flat-row-title h2:before,
+.branch .branch-icon, .flat-list-year ul li div:after,
+.imagebox.style3 .imagebox-header h3.imagebox-title:before,
+article .content-post .button-post a,
+ul.flat-pagination li a:hover, ul.flat-pagination li.active a,
+.tp-caption.button-slide, 
+.button-slide:hover,
+.tp-caption.button-slide-color:hover, .button-slide-color:hover {
+	background-color: #f87b27;
+}
+
+.go-top:hover {
+	background-color: rgba(248, 123, 39, 1);
+}

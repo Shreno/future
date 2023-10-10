@@ -1,0 +1,107 @@
+body{
+    direction: rtl !important;
+    text-align: right;
+}
+.floatright{
+    float: right !important;
+}
+.floatleft{
+    float: left !important;
+}
+.textright{
+  text-align: right !important;
+}
+.textleft{
+    text-align: left !important;
+}
+
+.iconbox .iconbox-icon{
+    margin-right: auto;
+    margin-left: 20px;
+}
+.flat-wrap-form .flat-wrap-input{
+    float: right !important;
+}
+.track-form i{
+    left: 25px;
+    right: auto;
+}
+.widget h4.widget-title{
+    padding-left: 32px;
+    padding-right: auto;
+
+}
+ul.flat-social{
+    margin-left: 20px;
+    margin-right: auto;
+}
+ul.flat-infomation li i {
+    margin-left: 8px;
+    margin-right: auto;
+}
+ 
+.tp-parallax-wrap {   
+    right: 85px !important;
+    left: auto !important;
+    text-align: right !important;
+}
+.tp-resizeme{
+    text-align: right !important;
+}
+.button-slide {
+    padding: 14px 27px 14px 10px !important;
+}
+.page-title .trail-items{
+    text-align: left;
+}
+.page-wrap .widget-area{
+    float: right;
+    text-align: right;
+    padding-right: 70px;
+    padding-left: auto;
+}
+.page-wrap .content-area{
+    float: right;
+    text-align: right;
+}
+.widget-recent ul li:before, .widget-categories ul li:before {
+    
+    content: none !important;
+  
+}
+.widget-recent ul li::after, .widget-categories ul li::after {
+    font-family: "FontAwesome";
+    content: "\f053";
+    font-size: 12px;
+    color: #656565;
+    position: absolute;
+    right: 0;
+    top: 11px;
+    padding-left: 20px;
+}
+.widget-recent ul li, .widget-categories ul li{
+    padding-right: 16px;
+    padding-left: auto;
+}
+.flat-row-title h2:after{
+    right:0 ;
+    left:auto !important;
+     width: 100px;
+}
+.form-qoute .form-qoute-title{
+    text-align:center;
+    
+}
+
+.form-qoute .form-qoute-title:after{
+   
+    left:auto !important;
+     right:39% !important;
+}
+.flat-row-title.why h2:after{
+    right:auto !important;
+    left: auto !important;
+}
+.form-qoute .form-qoute-title {
+    color:#fff  !important;
+}
