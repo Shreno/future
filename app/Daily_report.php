@@ -9,7 +9,7 @@ class Daily_report extends Model
 {
     use SoftDeletes;
     protected $fillable = [
-        'Recipient','Received','Returned','total','delegate_id','date', 'client_id'
+        'Recipient','Received','Returned','total','delegate_id','date', 
     ];
 
   
